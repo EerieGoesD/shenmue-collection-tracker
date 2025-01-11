@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Shenmue Gacha Capsules</title>
+    <title>Shenmue Collection Tracker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Progress tracker for Shenmue Gacha Capsules. Keep track of your capsule collections and achievements.">
     <meta name="author" content="Eerie Goes D">
-    <link rel="stylesheet" href="main.css">
     <link href="css/main.css" rel="stylesheet">
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -19,7 +17,6 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <h1>Shenmue Collection Tracker</h1>
-                </ul>
             </div>
         </div>
 
@@ -31,21 +28,62 @@
             or just add me on <a href="https://steamcommunity.com/profiles/76561198217097379/" target="_blank">Steam</a>!
         </div>
 
-        <!-- Tab Content -->
-        <div class="tab-content">
+        <!-- Warning Alert -->
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> Your progress is automatically saved in this browser, but it will be lost if you delete its cookies. 
+            You can save/load your state by using the import/export progress buttons.
+        </div>
 
-                    <!-- Non-Sega Collection Progress -->
-                    <div class="collection" data-collection-type="Gacha">
-                        <h3>Non-Sega Collection</h3>
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Capsule Name</th>
-                                    <th>Location</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+        <!-- Progress Management Buttons -->
+        <div class="progress-buttons">
+            <button id="export-state-btn" class="btn btn-export">Export Progress</button>
+            <button class="btn btn-import">
+                <label for="import-state-input" class="import-label">Import Progress...</label>
+            </button>
+            <input id="import-state-input" type="file" accept=".json" style="display: none;">
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="quick-navigation">
+            <h4>Quick Navigation:</h4>
+            <ul>
+                <li><a href="#non-sega-collection">Non-Sega</a></li>
+                <li><a href="#excited-sega-world-collection">Excited Sega World</a></li>
+                <li><a href="#port-collection">Port</a></li>
+                <li><a href="#qte-collection">QTE</a></li>
+                <li><a href="#sonic-collection">Sonic The Hedgehog</a></li>
+                <li><a href="#vehicle-collection">Vehicle</a></li>
+                <li><a href="#virtua-fighter-collection">Virtua Fighter</a></li>
+                <li><a href="#virtua-fighter-kids-collection">Virtua Fighter Kids</a></li>
+                <li><a href="#traded-capsules">Traded Capsule Toys</a></li>
+                <li><a href="#arcade-prize-collection">Arcade Prize</a></li>
+                <li><a href="#forklift-collection">Forklift</a></li>
+                <li><a href="#lucky-dip-prize">Lucky Dip Prize</a></li>
+                <li><a href="#slot-machine-collection">Slot Machine</a></li>
+                <li><a href="#scrolls-collection">Scrolls</a></li>
+                <li><a href="#cassettes-music-collection">Cassettes/Music</a></li>
+            </ul>
+        </div>
+
+        <!-- Overall Progress Display -->
+        <div id="Overall-progress" class="overall-progress">0% Total Collection Completed</div>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="progress-tracker">
+
+            <!-- Non-Sega -->
+            <div class="collection" data-collection-type="Gacha" id="non-sega-collection">
+                <h3>Non-Sega</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Capsule Name</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                                 <tr>
                                     <td>Binsbein 1</td>
                                     <td>Any gacha machine</td>
@@ -147,11 +185,12 @@
                         <div class="progress-message" id="Gacha-progress">0% Gacha Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Excited Sega World Collection Progress -->
-                    <div class="collection" data-collection-type="ExcitedSegaWorld">
-                        <h3>Excited Sega World Collection</h3>
-                        <table class="table table-striped table-hover">
-                            <thead>
+                    <!-- Excited Sega World -->
+                    <div class="collection" data-collection-type="ExcitedSegaWorld" id="excited-sega-world-collection">
+                        <h3>Excited Sega</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
                                 <tr>
                                     <th>Capsule Name</th>
                                     <th>Location</th>
@@ -348,11 +387,13 @@
                         <div class="progress-message" id="ExcitedSegaWorld-progress">0% Excited Sega World Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Port Collection Progress -->
-                    <div class="collection" data-collection-type="Port">
-                        <h3>Port Collection</h3>
+                <!-- Port -->
+                <div class="collection" data-collection-type="Port" id="port-collection">
+                    <h3>Port</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
+
                                 <tr>
                                     <th>Capsule Name</th>
                                     <th>Location</th>
@@ -453,9 +494,10 @@
                         <div class="progress-message" id="Port-progress">0% Port Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- QTE Collection Progress -->
-                    <div class="collection" data-collection-type="QTE">
-                        <h3>QTE Collection</h3>
+                <!-- QTE -->
+                <div class="collection" data-collection-type="QTE" id="qte-collection">
+                    <h3>QTE</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -502,11 +544,12 @@
                         <div class="progress-message" id="QTE-progress">0% QTE Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Sonic The Hedgehog Collection Progress -->
-                    <div class="collection" data-collection-type="Sonic">
-                        <h3>Sonic The Hedgehog Collection</h3>
-                        <table class="table table-striped table-hover">
-                            <thead>
+                    <!-- Sonic The Hedgehog Collectionrogress -->
+                    <div class="collection" data-collection-type="Sonic" id="sonic-collection">
+                        <h3>Sonic The Hedgehog</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
                                 <tr>
                                     <th>Capsule Name</th>
                                     <th>Location</th>
@@ -599,9 +642,10 @@
                         <div class="progress-message" id="Sonic-progress">0% Sonic Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Vehicle Collection Progress -->
-                    <div class="collection" data-collection-type="Vehicle">
-                        <h3>Vehicle Collection</h3>
+                <!-- Vehicle -->
+                <div class="collection" data-collection-type="Vehicle" id="vehicle-collection">
+                    <h3>Vehicle</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -768,9 +812,10 @@
                         <div class="progress-message" id="Vehicle-progress">0% Vehicle Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Virtua Fighter Collection Progress -->
-                    <div class="collection" data-collection-type="VirtuaFighter">
-                        <h3>Virtua Fighter Collection</h3>
+                <!-- Virtua Fighter -->
+                <div class="collection" data-collection-type="VirtuaFighter" id="virtua-fighter-collection">
+                    <h3>Virtua Fighter</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -921,9 +966,10 @@
                         <div class="progress-message" id="VirtuaFighter">0% Virtua Fighter Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Virtua Fighter Kids Collection Progress -->
-                    <div class="collection" data-collection-type="VirtuaFighterKids">
-                        <h3>Virtua Fighter Kids Collection</h3>
+                <!-- Virtua Fighter Kids -->
+                <div class="collection" data-collection-type="VirtuaFighterKids" id="virtua-fighter-kids-collection">
+                    <h3>Virtua Fighter</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1114,10 +1160,11 @@
                         <div class="progress-message" id="VirtuaFighterKids-progress">0% Virtua Fighter Kids Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Traded Capsule Toys Progress -->
-                    <div class="collection" data-collection-type="TradedCapsuleToys">
-                        <h3>Traded Capsule Toys</h3>
-                        <p><strong>Note:</strong> If you're playing on Dreamcast without a cheat disc, you won't be able to obtain these traded capsules.</p>
+                <!-- Traded Capsule Toys Progress -->
+                <div class="collection" data-collection-type="TradedCapsuleToys" id="traded-capsules">
+                    <h3>Traded Capsule Toys</h3>
+                    <p><strong>Note:</strong> If you're playing on Dreamcast without a cheat disc, you won't be able to obtain these traded capsules.</p>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1268,9 +1315,10 @@
                         <div class="progress-message" id="TradedCapsuleToys-progress">0% Traded Capsule Toys Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Arcade Prize Collection Progress -->
-                    <div class="collection" data-collection-type="ArcadePrize">
-                        <h3>Arcade Prize Collection</h3>
+                <!-- Arcade Prize -->
+                <div class="collection" data-collection-type="ArcadePrize" id="arcade-prize-collection">
+                    <h3>Arcade Prize</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1341,9 +1389,10 @@
                         <div class="progress-message" id="ArcadePrize-progress">0% Arcade Prize Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Forklift Collection Progress -->
-                    <div class="collection" data-collection-type="Forklift">
-                        <h3>Forklift Collection Progress</h3>
+                <!-- Forklift -->
+                <div class="collection" data-collection-type="Forklift" id="forklift-collection">
+                    <h3>Forklift</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1398,9 +1447,10 @@
                         <div class="progress-message" id="Forklift-progress">0% Forklift Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Lucky Dip Prize Collection Progress -->
-                    <div class="collection" data-collection-type="LuckyDipPrize">
-                        <h3>Lucky Dip Prize Collection Progress</h3>
+                <!-- Lucky Dip Prize -->
+                <div class="collection" data-collection-type="LuckyDipPrize" id="lucky-dip-prize">
+                    <h3>Lucky Dip Prize</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1543,9 +1593,10 @@
                         <div class="progress-message" id="LuckyDipPrize-progress">0% Lucky Dip Prize Completed / 0% Total Collection Completed</div>
                     </div>
 
-                    <!-- Slot Machine Collection Progress -->
-                    <div class="collection" data-collection-type="SlotMachine">
-                        <h3>Slot Machine Collection Progress</h3>
+                <!-- Slot Machine -->
+                <div class="collection" data-collection-type="SlotMachine" id="slot-machine-collection">
+                    <h3>Slot Machine</h3>
+                    <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
@@ -1608,11 +1659,12 @@
                         <div class="progress-message" id="SlotMachine-progress">0% Slot Machine Completed / 0% Total Collection Completed</div>
                     </div>
 
-                                        <!-- Scrolls Collection Progress -->
-                                        <div class="collection" data-collection-type="Scrolls">
-                                            <h3>Scrolls Collection</h3>
-                                            <table class="table table-striped table-hover">
-                                                <thead>
+                <!-- Scrolls -->
+                <div class="collection" data-collection-type="Scrolls" id="scrolls-collection">
+                    <h3>Scrolls</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
                                                     <tr>
                                                         <th>Move</th>
                                                         <th>Price</th>
@@ -1717,11 +1769,15 @@
                                             <div class="progress-message" id="Scrolls-progress">0% Scrolls Completed / 0% Total Collection Completed</div>
                                         </div>
                     
-                                        <!-- Cassettes/Music Collection Progress -->
-                                        <div class="collection" data-collection-type="CassettesMusic">
-                                            <h3>Cassettes/Music Collection</h3>
-                    
+                <!-- Cassettes/Music Collection Progress -->
+                <div class="collection" data-collection-type="CassettesMusic" id="cassettes-music-collection">
+                    <h3>Cassettes/Music</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>                    
+
                                             <!-- Free Tapes -->
+                                            <br>
                                             <h4>Free Tapes</h4>
                                             <table class="table table-striped table-hover">
                                                 <thead>

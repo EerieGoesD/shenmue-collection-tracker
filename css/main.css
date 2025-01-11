@@ -1,4 +1,10 @@
-/* Base Styles */
+/* Reset some basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -10,7 +16,6 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
 .navbar {
     background-color: #333;
     border: none;
@@ -28,55 +33,116 @@ body {
     margin: 0;
 }
 
-.nav.nav-tabs {
-    display: inline-block;
-    margin-left: 40px;
-    padding: 0;
-}
-
-.nav.nav-tabs li {
-    list-style: none;
-    display: inline-block;
-}
-
-.nav.nav-tabs li a {
-    color: #fff;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-}
-
-.nav.nav-tabs li.active a {
-    background-color: #555;
-    border-color: #555;
-}
-
 /* Alerts */
-.alert-info {
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-    color: #31708f;
+.alert {
     padding: 15px;
     border-radius: 4px;
     margin-bottom: 20px;
 }
 
-/* Introduction */
-#intro {
+.alert-info {
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    color: #31708f;
+}
+
+.alert-warning {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Overall Progress */
+.overall-progress {
+    padding: 15px;
+    border-radius: 4px;
     margin-bottom: 20px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    font-weight: bold;
 }
 
-#intro p {
+/* Buttons */
+.btn {
+    padding: 10px 20px;
     font-size: 16px;
-    line-height: 1.6;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-/* Tables */
+.btn-export {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-import {
+    background-color: #007bff;
+    color: white;
+}
+
+.import-label {
+    cursor: pointer;
+}
+
+/* Quick Navigation */
+.quick-navigation {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.quick-navigation h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quick-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quick-navigation li {
+    display: inline;
+}
+
+.quick-navigation a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quick-navigation a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Overall Progress Display */
+.overall-progress {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Table */
 .table {
     margin-bottom: 20px;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
+    width: auto;
+    table-layout: auto;
+    max-width: none;
 }
 
 .table th {
@@ -101,7 +167,17 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Custom Checkbox Styling */
+.table th, .table td {
+    vertical-align: middle;
+    border-right: 1px solid #ddd;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Checkboxes */
 .status-checkbox {
     display: none;
 }
@@ -109,10 +185,9 @@ body {
 .label-status {
     cursor: pointer;
     width: 20px;
-    height: 20px;
-    display: inline-block;
+    height: 22px;
+    display: flex;
     border: 2px solid #ccc;
-    border-radius: 4px;
     position: relative;
     vertical-align: middle;
 }
@@ -126,26 +201,27 @@ body {
     content: "";
     position: absolute;
     display: none;
-}
-
-.status-checkbox:checked + .label-status::after {
-    display: block;
-    left: 6px;
-    top: 2px;
+    left: 50%; /* Center horizontally */
+    top: 50%;  /* Center vertically */
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate */
 }
 
-/* Progress Message Styling */
+.status-checkbox:checked + .label-status::after {
+    display: block;
+}
+
+/* Progress Messages */
 .progress-message {
     margin-top: 10px;
     font-weight: bold;
     color: #333;
 }
 
+/* Popup Progress */
 .popup-progress {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
@@ -155,7 +231,7 @@ body {
     font-size: 12px;
     white-space: nowrap;
     z-index: 1000;
-    left: 25px;
+    left: 40px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -163,12 +239,16 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-
 .popup-progress.show {
     opacity: 1;
 }
 
-/* Responsive Design */
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .navbar h1 {
         display: block;
@@ -181,12 +261,20 @@ body {
     .nav.nav-tabs li {
         display: inline-block;
     }
+
+    .quick-navigation ul {
+        flex-direction: column;
+    }
+
+    .quick-navigation a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-/* Print Styles */
 @media print {
     body { color: #000; }
-    .navbar, #intro, input[type="checkbox"] {
+    .navbar, .alert-info, .alert-warning, .progress-buttons, .quick-navigation, input[type="checkbox"] {
         display: none;
     }
     a { color: #000; text-decoration: underline; }
@@ -196,12 +284,7 @@ body {
     .tab-pane { page-break-after: always; }
 }
 
-/* Additional Enhancements */
-.table th, .table td {
-    vertical-align: middle;
-    border-right: 1px solid #ddd;
-}
-
+/* Headings */
 h3 {
     margin-top: 30px;
     color: #333;
