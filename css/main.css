@@ -201,13 +201,13 @@ body {
     content: "";
     position: absolute;
     display: none;
-    left: 50%; /* Center horizontally */
-    top: 50%;  /* Center vertically */
+    left: 50%;
+    top: 50%; 
     width: 5px;
-    height: 10px;
+    height: 15px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate */
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .status-checkbox:checked + .label-status::after {
