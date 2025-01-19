@@ -20,9 +20,3 @@ Feel free to reach out if you have questions, suggestions, or ideas:
 Meanwhile, if you are interested in my work as a guitar player and music producer:
 - [YouTube](https://www.youtube.com/eeriegoesd)
 - [TikTok](https://www.tiktok.com/@eeriegoesd)
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
----
-Thank you for using the Shenmue Collection Tracker! Enjoy your journey in Shenmue.
