@@ -7,7 +7,7 @@ The **Shenmue Collection Tracker** is a lightweight, browser-based tool designed
 Shenmue Collection Tracker here: [Shenmue Collection Tracker](https://eeriegoesd.github.io/shenmue-collection-tracker/)
 
 ## About
-I’m [Eerie](https://linktr.ee/eeriegoesd). I created this lightweight website to help Shenmue players track their collections after finding no similar resource online.
+I’m [Eerie](https://eeriegoesd.com/). I created this lightweight website to help Shenmue players track their collections after finding no similar resource online.
 
 ## Future Plans
 If the tool proves helpful, I can add support for Shenmue 2 and Shenmue 3. Feedback is always welcome.
