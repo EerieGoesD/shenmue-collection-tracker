@@ -5,7 +5,46 @@
     <title>Shenmue Collection Tracker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Progress tracker for Shenmue Gacha Capsules. Keep track of your capsule collections and achievements.">
-    <meta name="author" content="Eerie Goes D">
+    <meta name="author" content="EERIE">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="keywords" content="shenmue collection tracker, shenmue gacha capsules, shenmue capsule toy list, shenmue collectibles guide, shenmue 100 percent, shenmue completionist, shenmue dreamcast collectibles" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://eeriegoesd.com/shenmue-collection-tracker/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shenmue Collection Tracker — Gacha, Capsules & Collectibles" />
+    <meta property="og:description" content="Free browser-based progress tracker for every Shenmue collectible: gacha capsules, arcade prizes, scrolls, cassettes, and more. Export/import your save." />
+    <meta property="og:url" content="https://eeriegoesd.com/shenmue-collection-tracker/" />
+    <meta property="og:image" content="https://eeriegoesd.com/shenmue-collection-tracker/og-shenmue-tracker.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shenmue Collection Tracker — Gacha, Capsules & Collectibles" />
+    <meta name="twitter:description" content="Track every Shenmue collectible. Free, runs in your browser." />
+    <meta name="twitter:image" content="https://eeriegoesd.com/shenmue-collection-tracker/og-shenmue-tracker.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Shenmue Collection Tracker",
+      "url": "https://eeriegoesd.com/shenmue-collection-tracker/",
+      "description": "Free browser-based progress tracker for all Shenmue collectibles including gacha capsules, arcade prizes, scrolls, cassettes, forklift races, and slot machine rewards.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "EERIE", "url": "https://eeriegoesd.com/" },
+      "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="js/main.js" defer></script>
 
@@ -33,10 +72,10 @@
         <!-- Welcome Alert -->
         <div class="alert alert-info">
             <strong>Welcome!</strong> 
-            I'm <a href="https://linktr.ee/eeriegoesd" target="_blank">EERIE</a>, and welcome to this simple Shenmue Collection Tracker. 
+            I'm <a href="https://eeriegoesd.com/" target="_blank" rel="noopener">EERIE</a>, and welcome to this simple Shenmue Collection Tracker.
             Feel free to leave any feedback by reaching out to me via email at <a href="mailto:eeriegoesd@gmail.com">eeriegoesd@gmail.com</a> 
-            or just add me on <a href="https://steamcommunity.com/profiles/76561198217097379/" target="_blank">Steam</a>!
-        </div>
+            or just add me on <a href="https://steamcommunity.com/profiles/76561198217097379/" target="_blank">Steam</a>!<br>
+            If you want to support this project, please <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noopener">Buy Me a Coffee</a>!        </div>
 
         <!-- Warning Alert -->
         <div class="alert alert-warning">
@@ -194,6 +233,7 @@
                         </table>
                         <div class="progress-message" id="Gacha-progress">0% Gacha Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                     <!-- Excited Sega World -->
                     <div class="collection" data-collection-type="ExcitedSegaWorld" id="excited-sega-world-collection">
@@ -396,6 +436,8 @@
                         </table>
                         <div class="progress-message" id="ExcitedSegaWorld-progress">0% Excited Sega World Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
+ 
 
                 <!-- Port -->
                 <div class="collection" data-collection-type="Port" id="port-collection">
@@ -503,6 +545,7 @@
                         </table>
                         <div class="progress-message" id="Port-progress">0% Port Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- QTE -->
                 <div class="collection" data-collection-type="QTE" id="qte-collection">
@@ -553,6 +596,7 @@
                         </table>
                         <div class="progress-message" id="QTE-progress">0% QTE Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                     <!-- Sonic The Hedgehog Collectionrogress -->
                     <div class="collection" data-collection-type="Sonic" id="sonic-collection">
@@ -651,6 +695,7 @@
                         </table>
                         <div class="progress-message" id="Sonic-progress">0% Sonic Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Vehicle -->
                 <div class="collection" data-collection-type="Vehicle" id="vehicle-collection">
@@ -821,6 +866,7 @@
                         </table>
                         <div class="progress-message" id="Vehicle-progress">0% Vehicle Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Virtua Fighter -->
                 <div class="collection" data-collection-type="VirtuaFighter" id="virtua-fighter-collection">
@@ -975,6 +1021,7 @@
                         </table>
                         <div class="progress-message" id="VirtuaFighter">0% Virtua Fighter Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Virtua Fighter Kids -->
                 <div class="collection" data-collection-type="VirtuaFighterKids" id="virtua-fighter-kids-collection">
@@ -1169,6 +1216,7 @@
                         </table>
                         <div class="progress-message" id="VirtuaFighterKids-progress">0% Virtua Fighter Kids Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Traded Capsule Toys Progress -->
                 <div class="collection" data-collection-type="TradedCapsuleToys" id="traded-capsules">
@@ -1327,6 +1375,7 @@
                         </table>
                         <div class="progress-message" id="TradedCapsuleToys-progress">0% Traded Capsule Toys Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Arcade Prize -->
                 <div class="collection" data-collection-type="ArcadePrize" id="arcade-prize-collection">
@@ -1401,6 +1450,7 @@
                         </table>
                         <div class="progress-message" id="ArcadePrize-progress">0% Arcade Prize Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Forklift -->
                 <div class="collection" data-collection-type="Forklift" id="forklift-collection">
@@ -1459,6 +1509,7 @@
                         </table>
                         <div class="progress-message" id="Forklift-progress">0% Forklift Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Lucky Dip Prize -->
                 <div class="collection" data-collection-type="LuckyDipPrize" id="lucky-dip-prize">
@@ -1605,6 +1656,7 @@
                         </table>
                         <div class="progress-message" id="LuckyDipPrize-progress">0% Lucky Dip Prize Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Slot Machine -->
                 <div class="collection" data-collection-type="SlotMachine" id="slot-machine-collection">
@@ -1671,6 +1723,7 @@
                         </table>
                         <div class="progress-message" id="SlotMachine-progress">0% Slot Machine Completed / 0% Total Collection Completed</div>
                     </div>
+                </div>
 
                 <!-- Scrolls -->
                 <div class="collection" data-collection-type="Scrolls" id="scrolls-collection">
@@ -1781,6 +1834,7 @@
                                             </table>
                                             <div class="progress-message" id="Scrolls-progress">0% Scrolls Completed / 0% Total Collection Completed</div>
                                         </div>
+                                    </div>
                     
                 <!-- Cassettes/Music Collection Progress -->
                 <div class="collection" data-collection-type="CassettesMusic" id="cassettes-music-collection">
@@ -2059,6 +2113,34 @@
         </div>
 
     </div>
+
+<!-- FAQ Section -->
+<div class="container">
+  <section class="faq-section">
+    <div class="faq-divider"></div>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <details class="faq-item">
+      <summary>What does this tracker cover?</summary>
+      <p>Every collectible in Shenmue: gacha capsules (Non-Sega, Excited Sega World, Port, QTE, Sonic, Vehicle, Virtua Fighter, Virtua Fighter Kids), traded capsule toys, arcade prizes, forklift race trophies, lucky dip prizes, slot machine rewards, move scrolls, and cassette tapes.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is my progress saved?</summary>
+      <p>Yes — your checkboxes auto-save in your browser's local storage. However, clearing cookies will erase it. Use the Export button to back up your progress as a JSON file you can import anytime.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does this work for the Steam version?</summary>
+      <p>Yes. On the Steam version (Shenmue I & II), the traded capsule toys are automatically added to your collection when you start the game. On Dreamcast without a cheat disc, you cannot obtain those traded capsules. The tracker works for both versions.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I get 100% completion?</summary>
+      <p>Collect all gacha capsules from every machine type, win all arcade prizes by hitting the required scores, place in all five forklift race positions, hit jackpots on each slot machine denomination, buy all scrolls from Bunkado Antiques and find the hidden ones, and purchase all cassette tapes from the Tomato Store plus find the free ones.</p>
+    </details>
+  </section>
+</div>
 
 </body>
 </html>
